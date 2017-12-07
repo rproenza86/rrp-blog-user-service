@@ -70,5 +70,5 @@ export function livenessProbe(req, res, next) {
 }
 
 export function readinessProbe(req, res, next) {
-  res.status(200).json({ server_status: "ready now YEEEAAAAH" });
+  res.status(200).json({ server_status: "Ready now YEEEAAAAH" });
 }

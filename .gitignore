@@ -18,6 +18,7 @@ plugins
 www
 npm-debug.log
 build/
+.config/
 
 
 # OS generated files #
