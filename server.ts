@@ -10,7 +10,17 @@ import config from './config/main';
 const app = express();
 
 // init mongoose
-(mongoose.connection as any).openUri(config.db);
+// (mongoose.connection as any).openUri(config.db);
+const mongoOptions = {
+  useMongoClient: true
+};
+mongoose.connect(config.db, mongoOptions ).then(
+  () => { console.log("DB ready! ",mongoose.connection.readyState); },
+  err => { 
+    console.log("DB connection error! Error details:"); 
+    console.log(err); 
+  }
+);
 
 // express middleware
 app.use(bodyParser.urlencoded({ extended: false }));

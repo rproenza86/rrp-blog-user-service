@@ -66,7 +66,7 @@ export function deleteUser(req, res, next) {
 
 //For the docker container status
 export function livenessProbe(req, res, next) {
-  res.status(200).json({ server_status: "alive now1" });
+  res.status(200).json({ server_status: "alive now2" });
 }
 
 export function readinessProbe(req, res, next) {

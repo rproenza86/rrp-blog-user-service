@@ -32,6 +32,9 @@ export default (app) => {
   // kubernetes livenessProbe
   apiRoutes.get('/healthz', livenessProbe);
 
+  // kubernetes livenessProbe
+  apiRoutes.post('/kaka', createUser);
+
   /********************************
   === append apiRoutes to app
   ********************************/
